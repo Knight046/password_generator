@@ -1,0 +1,36 @@
+<h1>Form Generator</h1>
+<br>
+
+<p> You can generate your password here</p>
+
+<form action="{% url 'password' %}">
+    <select name="Length">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10" selected="selected">10</option>
+        <option value="11">11</option>
+        <option value="12" >12</option>
+    </select>
+    
+    <br>
+    <label for="uppercase">uppercase</label>
+    <input type="checkbox" name="uppercase">
+
+    <br>
+    <label for="Numbers">Numbers</label>
+    <input type="checkbox" name="Numbers">
+
+    <br>
+    <label for="Specialcharacters">Specialcharacters</label>
+    <input type="checkbox" name="Specialcharacters">
+    
+    <br>
+    <br>
+
+    <input type="submit" value="Generate password">
+</form>
+
+
+<p>For about us<a href="{% url 'about' %}">About</a></p>
